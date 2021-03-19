@@ -46,4 +46,6 @@ const request = async (dataSource = null) => {
     });
 }
 
-module.exports = request
+module.exports = {
+    request
+}
