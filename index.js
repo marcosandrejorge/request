@@ -11,18 +11,18 @@ const objConfig = {
 };
 
 const getConfig = (dataSource = null) => {
-    let baseUrl = dataSource?.baseUrl || objConfig.baseUrl;
-    let urlPath = dataSource?.urlPath || objConfig.urlPath;
-    let data = dataSource?.data || objConfig.data
+    let baseUrl = dataSource.baseUrl;
+    let urlPath = dataSource.urlPath;
+    let data = dataSource.data;
     let url = baseUrl + urlPath;
-    url = dataSource?.url || url;
+    url = dataSource.url;
 
     let config = {
         url: url,
-        headers: dataSource?.headers || objConfig.headers,
-        timeout: dataSource?.timeout || objConfig.timeout,
-        method: dataSource?.method || objConfig.method,
-        auth: dataSource?.auth || objConfig.auth
+        headers: dataSource.headers,
+        timeout: dataSource.timeout,
+        method: dataSource.method,
+        auth: dataSource.auth
     }
 
     if (config.method.toUpperCase() === 'GET') {
