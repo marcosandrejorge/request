@@ -1,8 +1,6 @@
-import axios from "axios/dist/axios";
+var objConfig = require('./config/defaultConfig');
 
-const objConfig = require('./config/defaultConfig');
-
-const getConfig = (dataSource = null) => {
+var getConfig = (dataSource = null) => {
     let baseUrl = dataSource.baseUrl;
     let urlPath = dataSource.urlPath;
     let data = dataSource.data;
@@ -30,15 +28,8 @@ const getConfig = (dataSource = null) => {
 
 function requestService(){
     let dataSource = null;
-    let config = getConfig(dataSource)
-    return new Promise((resolve, reject) => {
-        axios(config).then((response) => {
-            resolve(response)
-        })
-            .catch((error) => {
-                reject(error)
-            })
-    });
+    let config = getConfig(dataSource);
+    console.log(config);
 }
 
 module.exports = requestService
