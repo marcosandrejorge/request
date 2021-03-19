@@ -1,6 +1,6 @@
 {
   "name": "requestmarcosnpm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Encapsulamento do axios",
   "main": "lib/index.js",
   "scripts": {
@@ -28,5 +28,10 @@
     "@babel/cli": "^7.13.10",
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   }
 }
