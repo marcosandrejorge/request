@@ -1,18 +1,13 @@
+import axios from "axios/dist/axios";
 var objConfig = require('./config/defaultConfig');
 
 var getConfig = (dataSource = null) => {
-    let baseUrl = dataSource.baseUrl;
-    let urlPath = dataSource.urlPath;
-    let data = dataSource.data;
-    let url = baseUrl + urlPath;
+    let data = "";
     url = dataSource.url;
 
     let config = {
         url: url,
-        headers: dataSource.headers,
-        timeout: dataSource.timeout,
         method: dataSource.method,
-        auth: dataSource.auth
     }
 
     if (config.method.toUpperCase() === 'GET') {
@@ -26,10 +21,16 @@ var getConfig = (dataSource = null) => {
     return config;
 }
 
-function requestService(){
-    let dataSource = null;
+function requestService(dataSource){
     let config = getConfig(dataSource);
-    console.log(config);
+    return new Promise((resolve, reject) => {
+        axios(config).then((response) => {
+            resolve(response)
+        })
+            .catch((error) => {
+                reject(error)
+            })
+    });
 }
 
 module.exports = requestService
