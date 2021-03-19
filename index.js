@@ -47,5 +47,3 @@ const request = async (dataSource = null) => {
 }
 
 module.exports = request
-//Typescript
-module.exports.default = request
