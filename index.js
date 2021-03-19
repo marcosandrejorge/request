@@ -34,16 +34,8 @@ const getConfig = (dataSource = null) => {
     return config;
 }
 
-async function requestService(dataSource = null){
-    let config = getConfig(dataSource)
-    return new Promise((resolve, reject) => {
-        axios(config).then((response) => {
-            resolve(response)
-        })
-            .catch((error) => {
-                reject(error)
-            })
-    });
+function requestService(dataSource = null){
+    return dataSource;
 }
 
 module.exports = {
