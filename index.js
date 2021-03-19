@@ -34,7 +34,7 @@ const getConfig = (dataSource = null) => {
     return config;
 }
 
-const request = async (dataSource = null) => {
+async function requestService(dataSource = null){
     let config = getConfig(dataSource)
     return new Promise((resolve, reject) => {
         axios(config).then((response) => {
@@ -47,5 +47,5 @@ const request = async (dataSource = null) => {
 }
 
 module.exports = {
-    request
+    requestService
 }
