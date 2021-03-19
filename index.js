@@ -2,6 +2,7 @@ var objConfig = require('./config/defaultConfig');
 var axios = require('axios');
 
 const getConfig = (dataSource = null) => {
+    let data = "";
     let config = objConfig;
     config.url = dataSource.url;
     config.method = dataSource.method;
