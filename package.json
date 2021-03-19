@@ -1,5 +1,5 @@
 {
-  "name": "request",
+  "name": "tigrerequest",
   "version": "1.0.0",
   "description": "Encapsulamento do axios",
   "main": "index.js",
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "request",
-    "axios"
+    "axios",
+    "tigre"
   ],
   "author": "marcos andré jorge <marcosandre.bnu@gmail.com>",
   "license": "MIT",
