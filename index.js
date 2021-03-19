@@ -1,5 +1,5 @@
-import axios from "axios/dist/axios";
 var objConfig = require('./config/defaultConfig');
+var axios = require('axios');
 
 var getConfig = (dataSource = null) => {
     let data = "";
