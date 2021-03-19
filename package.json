@@ -15,7 +15,7 @@
     "axios",
     "tigre"
   ],
-  "author": "marcos andré jorge <marcosandre.bnu@gmail.com>",
+  "author": "marcos andré jorge <>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/marcosandrejorge/request/issues"
