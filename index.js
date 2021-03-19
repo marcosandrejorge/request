@@ -1,14 +1,10 @@
 var objConfig = require('./config/defaultConfig');
 var axios = require('axios');
 
-var getConfig = (dataSource = null) => {
-    let data = "";
-    url = dataSource.url;
-
-    let config = {
-        url: url,
-        method: dataSource.method,
-    }
+const getConfig = (dataSource = null) => {
+    let config = objConfig;
+    config.url = dataSource.url;
+    config.method = dataSource.method;
 
     if (config.method.toUpperCase() === 'GET') {
         config.params = data;
@@ -16,13 +12,11 @@ var getConfig = (dataSource = null) => {
         config.data = data;
     }
 
-    console.log(objConfig);
-
     return config;
 }
 
-function requestService(dataSource){
-    let config = getConfig(dataSource);
+async function requestService(dataSource = null){
+    let config = getConfig(dataSource)
     return new Promise((resolve, reject) => {
         axios(config).then((response) => {
             resolve(response)
