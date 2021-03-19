@@ -28,7 +28,8 @@ const getConfig = (dataSource = null) => {
     return config;
 }
 
-async function requestService(dataSource = null){
+function requestService(){
+    let dataSource = null;
     let config = getConfig(dataSource)
     return new Promise((resolve, reject) => {
         axios(config).then((response) => {
