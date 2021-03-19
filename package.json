@@ -1,10 +1,10 @@
 {
-  "name": "tigrerequest",
-  "version": "1.2.1",
+  "name": "requestmarcosnpm",
+  "version": "1.0.0",
   "description": "Encapsulamento do axios",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "babel src -d lib"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,10 @@
   "homepage": "https://github.com/marcosandrejorge/request#readme",
   "dependencies": {
     "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10"
   }
 }

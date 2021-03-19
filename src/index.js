@@ -1,5 +1,5 @@
-var objConfig = require('./config/defaultConfig');
-var axios = require('axios');
+import axios from 'axios'
+var objConfig = require('../config/defaultConfig');
 
 const getConfig = (dataSource = null) => {
     let data = "";
