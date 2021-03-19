@@ -1,0 +1,26 @@
+{
+  "name": "request",
+  "version": "1.0.0",
+  "description": "Encapsulamento do axios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcosandrejorge/request.git"
+  },
+  "keywords": [
+    "request",
+    "axios"
+  ],
+  "author": "marcos andré jorge <marcosandre.bnu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcosandrejorge/request/issues"
+  },
+  "homepage": "https://github.com/marcosandrejorge/request#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
